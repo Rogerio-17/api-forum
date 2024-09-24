@@ -1,0 +1,27 @@
+import { Answer } from "../../enterprise/entities/answer";
+import { AnswersRepository } from "@/domain/repositories/answers-repository";
+
+interface FetchQuestionAnswerUseCaseRequest {
+  questionId: string;
+  page: number;
+}
+
+interface FetchQuestionAnswerUseCaseResponse {
+  answers: Answer[];
+}
+
+export class FetchQuestionAnswerUseCase {
+  constructor(private answersRepository: AnswersRepository) {}
+
+  async execute({
+    questionId,
+    page,
+  }: FetchQuestionAnswerUseCaseRequest): Promise<FetchQuestionAnswerUseCaseResponse> {
+    const answers = await this.answersRepository.findManyByQuestionId(
+      questionId,
+      { page }
+    );
+
+    return { answers };
+  }
+}
