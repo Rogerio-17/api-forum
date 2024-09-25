@@ -1,5 +1,5 @@
 import { UniqueEntityID } from "../../../../core/entities/unique-entity-id";
-import { QuestionsRepository } from "@/domain/repositories/questions-repository";
+import { QuestionsRepository } from "@/domain/forum/application/repositories/questions-repository";
 import { Question } from "../../enterprise/entities/question";
 
 interface CreateQuestionUseCaseRequest {

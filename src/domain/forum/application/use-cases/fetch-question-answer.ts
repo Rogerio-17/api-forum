@@ -1,5 +1,5 @@
 import { Answer } from "../../enterprise/entities/answer";
-import { AnswersRepository } from "@/domain/repositories/answers-repository";
+import { AnswersRepository } from "@/domain/forum/application/repositories/answers-repository";
 
 interface FetchQuestionAnswerUseCaseRequest {
   questionId: string;

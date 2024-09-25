@@ -1,8 +1,8 @@
-import { AnswersRepository } from "@/domain/repositories/answers-repository";
+import { AnswersRepository } from "@/domain/forum/application/repositories/answers-repository";
 import { UniqueEntityID } from "../../../../core/entities/unique-entity-id";
 import { Answer } from "../../enterprise/entities/answer";
 import { Question } from "../../enterprise/entities/question";
-import { QuestionsRepository } from "@/domain/repositories/questions-repository";
+import { QuestionsRepository } from "@/domain/forum/application/repositories/questions-repository";
 
 interface ChooseQuestionBestAnswerUseCaseRequest {
   authorId: string;
