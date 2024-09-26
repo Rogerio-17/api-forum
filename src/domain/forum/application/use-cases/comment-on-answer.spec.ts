@@ -25,13 +25,19 @@ describe("Choose Comment On Answer", () => {
     });
     await inMemoryAnswerRepository.create(answer);
 
-    const { answerComment } = await sut.execute({
+    const result = await sut.execute({
       authorId: answer.authorId.toString(),
       answerId: answer.id.toString(),
       content: "comment in answer",
     });
 
-    expect(inMemoryAnswerCommentsRepository.items).toHaveLength(1);
-    expect(inMemoryAnswerCommentsRepository.items[0]).toBe(answerComment);
+    if ("answerComment" in result.value) {
+      expect(inMemoryAnswerCommentsRepository.items).toHaveLength(1);
+      expect(inMemoryAnswerCommentsRepository.items[0]).toBe(
+        result.value.answerComment
+      );
+    } else {
+      throw new Error("Expected result to contain answerComment");
+    }
   });
 });
