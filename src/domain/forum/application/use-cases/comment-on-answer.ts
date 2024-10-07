@@ -1,8 +1,8 @@
-import { UniqueEntityID } from "../../../../core/entities/unique-entity-id";
+import { UniqueEntityID } from "@/core/entities/unique-entity-id";
 import { AnswersRepository } from "@/domain/forum/application/repositories/answers-repository";
 import { AnswerComment } from "../../enterprise/entities/answer-comment";
 import { Either, left, right } from "@/core/either";
-import { ResourceNotFoundError } from "./errors/resource-nout-found-errror";
+import { ResourceNotFoundError } from "@/core/errors/errors/resource-nout-found-errror";
 import { AnswerCommentsRepository } from "../repositories/answer-comments-repository";
 
 interface CommentOnAnswerUseCaseRequest {

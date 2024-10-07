@@ -1,8 +1,8 @@
 import { AnswersRepository } from "@/domain/forum/application/repositories/answers-repository";
 import { Answer } from "../../enterprise/entities/answer";
 import { Either, left, right } from "@/core/either";
-import { ResourceNotFoundError } from "./errors/resource-nout-found-errror";
-import { NotAllowedError } from "./errors/not-allowed-error";
+import { ResourceNotFoundError } from "@/core/errors/errors/resource-nout-found-errror";
+import { NotAllowedError } from "@/core/errors/errors/not-allowed-error";
 import { AnswerAttachmentsList } from "../../enterprise/entities/answer-attachment-list";
 import { AnswerAttachment } from "../../enterprise/entities/answer-attachment";
 import { UniqueEntityID } from "@/core/entities/unique-entity-id";

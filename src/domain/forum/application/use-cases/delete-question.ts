@@ -1,7 +1,7 @@
 import { Either, left, right } from "@/core/either";
 import { QuestionsRepository } from "@/domain/forum/application/repositories/questions-repository";
-import { ResourceNotFoundError } from "./errors/resource-nout-found-errror";
-import { NotAllowedError } from "./errors/not-allowed-error";
+import { ResourceNotFoundError } from "@/core/errors/errors/resource-nout-found-errror";
+import { NotAllowedError } from "@/core/errors/errors/not-allowed-error";
 
 interface DeleteQuestionUseCaseRequest {
   authorId: string;

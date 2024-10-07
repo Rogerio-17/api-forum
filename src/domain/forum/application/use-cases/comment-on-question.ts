@@ -1,9 +1,9 @@
-import { UniqueEntityID } from "../../../../core/entities/unique-entity-id";
+import { UniqueEntityID } from "@/core/entities/unique-entity-id";
 import { QuestionsRepository } from "@/domain/forum/application/repositories/questions-repository";
 import { QuestionComment } from "../../enterprise/entities/question-comment";
 import { QuestionCommentsRepository } from "@/domain/forum/application/repositories/question-comments-repository";
 import { Either, left, right } from "@/core/either";
-import { ResourceNotFoundError } from "./errors/resource-nout-found-errror";
+import { ResourceNotFoundError } from "@/core/errors/errors/resource-nout-found-errror";
 
 interface CommentOnQuestionUseCaseRequest {
   authorId: string;

@@ -1,5 +1,5 @@
 import { AnswersRepository } from "@/domain/forum/application/repositories/answers-repository";
-import { UniqueEntityID } from "../../../../core/entities/unique-entity-id";
+import { UniqueEntityID } from "@/core/entities/unique-entity-id";
 import { Answer } from "../../enterprise/entities/answer";
 import { Either, right } from "@/core/either";
 import { AnswerAttachment } from "../../enterprise/entities/answer-attachment";
