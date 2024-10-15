@@ -1,5 +1,4 @@
 import { InMemoryNotificationsRepository } from "test/repositories/in-memory-notification-repository";
-import { UniqueEntityID } from "@/core/entities/unique-entity-id";
 import { SendNotificationUseCase } from "./send-notification";
 
 let inMemoryNotificationsRepository: InMemoryNotificationsRepository;

@@ -14,15 +14,14 @@ export abstract class Entity<Props> {
   }
 
   public equals(entity: Entity<Props>): boolean {
-
     if (entity === this) {
       return true;
     }
 
-    if (entity.id === this.id) {
+    if (entity.id === this._id) {
       return true;
     }
 
-    return false
+    return false;
   }
 }
