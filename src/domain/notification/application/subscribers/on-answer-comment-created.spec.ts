@@ -1,8 +1,6 @@
 import { makeAnswer } from "test/factories/make-answer";
 import { InMemoryAnswersRepository } from "test/repositories/in-memory-answers-repository";
 import { InMemoryAnswerAttachmentsRepository } from "test/repositories/in-memory-answers-attachments-repository";
-import { InMemoryQuestionsRepository } from "test/repositories/in-memory-question-repository";
-import { InMemoryQuestionAttachmentsRepository } from "test/repositories/in-memory-question-attachments-repository";
 import {
   SendNotificationUseCase,
   SendNotificationUseCaseRequest,
@@ -15,8 +13,6 @@ import { makeAnswerComment } from "test/factories/make-answer-comment";
 import { InMemoryAnswerCommentsRepository } from "test/repositories/in-memory-answers-comments-repository";
 import { OnAnswerCommentCreated } from "./on-answer-comment-created";
 
-let inMemoryQuestionAttachmentsRepository: InMemoryQuestionAttachmentsRepository;
-let inMemoryQuestionsRepository: InMemoryQuestionsRepository;
 let inMemoryAnswerAttachmentsRepository: InMemoryAnswerAttachmentsRepository;
 let inMemoryAnswersRepository: InMemoryAnswersRepository;
 let inMemoryNotificationsRepository: InMemoryNotificationsRepository;
@@ -31,11 +27,6 @@ let sendNotificationExecuteSpy: MockInstance<
 
 describe("On Answer Comment Created", () => {
   beforeEach(() => {
-    inMemoryQuestionAttachmentsRepository =
-      new InMemoryQuestionAttachmentsRepository();
-    inMemoryQuestionsRepository = new InMemoryQuestionsRepository(
-      inMemoryQuestionAttachmentsRepository
-    );
     inMemoryAnswerAttachmentsRepository =
       new InMemoryAnswerAttachmentsRepository();
     inMemoryAnswersRepository = new InMemoryAnswersRepository(

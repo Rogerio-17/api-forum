@@ -26,8 +26,6 @@ export class OnAnswerCommentCreated implements EventHandler {
       answerComment.answerId.toString()
     );
 
-    console.log(answer);
-
     if (answer) {
       await this.sendNotification.execute({
         recipientId: answer.authorId.toString(),
